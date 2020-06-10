@@ -8,10 +8,13 @@ namespace CodeSignalCSharp
 {
     class N01_05
     {
+        //No.01
         int add(int param1, int param2)
         {
             return (param1 + param2);
         }
+
+        //No.02
         int centuryFromYear(int year)
         {
             return ((year - 1) / 100 + 1);
@@ -20,6 +23,8 @@ namespace CodeSignalCSharp
         {
             return Convert.ToInt32(Math.Ceiling(Convert.ToDecimal(year) / 100));
         }
+
+        //No.03
         bool checkPalindrome(string inputString)
         {
             string result = new string(inputString.Reverse().ToArray());
@@ -30,6 +35,7 @@ namespace CodeSignalCSharp
             return myString.SequenceEqual(myString.Reverse());
         }
 
+        //No.04
         int adjacentElementsProduct(int[] inputArray)
         {
             int m = int.MinValue;
