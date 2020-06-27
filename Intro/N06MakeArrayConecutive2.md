@@ -39,3 +39,8 @@ def makeArrayConsecutive2(statues):
     inputrange = max(statues) - min(statues) - 1
     return inputrange - (len(set(statues)) - 2)
 ```
+#### CSharp
+```csharp
+int makeArrayConsecutive2(int[] statues) {
+    return statues.Max()-statues.Min()+1-statues.Length;
+```

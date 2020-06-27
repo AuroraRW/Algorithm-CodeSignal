@@ -55,3 +55,8 @@ int adjacentElementsProduct(int[] inputArray)
     return m;
 }
 ```
+```csharp
+int adjacentElementsProduct(int[] inputArray) {
+    return inputArray.Select((i, j) => j > 0 ? i * inputArray[j-1] : int.MinValue).Max();
+}
+```

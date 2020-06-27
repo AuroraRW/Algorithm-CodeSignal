@@ -37,3 +37,19 @@ def allLongestStrings(inputArray):
 def allLongestStrings(inputArray):  
     return [i for i in inputArray if len(i) == max(map(len, inputArray))]
 ```
+```python
+def allLongestStrings(inputArray):
+    longest = 0
+    res = []
+    for s in inputArray:
+        if len(s) == longest:
+            res.append(s)
+        if len(s) > longest:
+            longest = len(s)
+            res = [s]
+    return res
+```
+#### CSharp
+```csharp
+
+```

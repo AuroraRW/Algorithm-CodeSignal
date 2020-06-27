@@ -43,3 +43,9 @@ def shapeArea(n):
         return 4 * n - 4 + shapeArea(n - 1)
 """
 ```
+#### CSharp
+```csharp
+int shapeArea(int n) {
+    return(2 * (n - 1) * n + 1);
+}
+```

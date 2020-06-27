@@ -46,7 +46,7 @@ Input/Output
 
     [output] integer
         The total price of all the rooms that are suitable for the CodeBots to live in.
-### python
+#### python
 ```python
 def matrixElementsSum(matrix):
     # i is column, j is row
@@ -57,4 +57,34 @@ def matrixElementsSum(matrix):
                 break
             sum = sum + matrix[j][i]
     return sum
+```
+```python
+from itertools import takewhile
+def matrixElementsSum(matrix):
+    mt = list(zip(*matrix)) # mt is [(0, 0, 2), (1, 5, 0), (1, 0, 3), (2, 0, 3)]
+    return sum([sum(takewhile(lambda x: x>0, y)) for y in mt])
+```
+```csharp
+int matrixElementsSum(int[][] matrix) {
+// i is column, j is row
+    int sum = 0;
+    for (int i = 0; i < matrix[0].Length; i++)
+    {
+        for (int j = 0; j < matrix.Length; j++)
+        {
+            if (matrix[j][i] == 0) break;
+            sum = sum + matrix[j][i];
+        }
+    }
+    return sum;
+}
+```
+```csharp
+int matrixElementsSum(int[][] matrix) {
+    int sum = 0;
+    for (int c=0; c<matrix[0].Length; c++) {
+        sum += matrix.TakeWhile(_ => _[c] != 0).Sum(_ => _[c]);
+    }
+    return sum;
+}
 ```
